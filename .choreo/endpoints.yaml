@@ -16,3 +16,15 @@ endpoints:
     # +optional Context (base path) of the API that is exposed via this endpoint.
     # This is mandatory if the endpoint type is set to REST or GraphQL.
     context: /demo-service
+  - name: gQL Demo Server
+    # +required Numeric port value that gets exposed via this endpoint
+    port: 8081
+    # +required Type of the traffic this endpoint is accepting. Example: REST, GraphQL, etc.
+    # Allowed values: REST, GraphQL, GRPC, UDP, TCP
+    type: GraphQL
+    # +optional Network level visibility of this endpoint. Defaults to Public
+    # Accepted values: Project|Organization|Public.
+    networkVisibility: Public
+    # +optional Context (base path) of the API that is exposed via this endpoint.
+    # This is mandatory if the endpoint type is set to REST or GraphQL.
+    context: /demogql-service
